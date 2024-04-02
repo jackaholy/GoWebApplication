@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random Quote</title>
 </head>
 <body>
-<h1>Random Quote</h1>
+<h1>Famous Quote</h1>
 <blockquote>
     <p>{{ .Content }}</p>
-    <footer>{{ .Author }}</footer>
+    <footer> - {{ .Author }}</footer>
 </blockquote>
 <form action="/save" method="post">
     <input type="hidden" name="content" value="{{ .Content }}">
     <input type="hidden" name="author" value="{{ .Author }}">
-    <button type="submit">Save</button>
-    <button type="Reload">Get Another Quote</button>
+    <button type="Reload">Generate Another Quote</button>
 </form>
 </body>
 </html>
