@@ -13,7 +13,7 @@ type Quote struct {
 	Author  string `json:"author"`
 }
 
-func fetchQuote() (Quote, error) {
+func fetchQuote() Quote {
 	// Make a GET request to the "Quotable API"
 	resp, err := http.Get("https://api.quotable.io/random")
 
@@ -26,21 +26,18 @@ func fetchQuote() (Quote, error) {
 
 	// Check if quote exists
 	if err != nil {
-		return Quote{}, err
+		return Quote{}
 	}
 
-	return quote, nil
+	return quote
 }
 
 func printQuote(w http.ResponseWriter, _ *http.Request) {
 	// Fetch a random quote
-	quote, err := fetchQuote()
+	quote := fetchQuote()
 
 	// Format the quote to be printed
-	_, err = fmt.Fprintf(w, "Random Quote:\n%s\n- %s", quote.Content, quote.Author)
-	if err != nil {
-		return
-	}
+	fmt.Fprintf(w, "Random Quote:\n%s\n- %s", quote.Content, quote.Author)
 }
 
 func main() {
