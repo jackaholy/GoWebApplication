@@ -1,3 +1,10 @@
+/*
+Author: Jack Holy
+Description: A Go program which generates a random quote from a famous individual. The quotes are taken from
+the Quotable API which can be found at https://docs.quotable.io/. The user can click a button to generate a new
+quote as many times as they want.
+*/
+
 package main
 
 import (
