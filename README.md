@@ -2,7 +2,7 @@
 This Go program generates a random quote from a famous individual. The quotes are taken from
 the Quotable API which can be found at:
 
-https://docs.quotable.io/.
+https://docs.quotable.io/
 
 The user can click a button to generate a newquote as many times as they want.
 
@@ -24,7 +24,7 @@ While in your parent directory run:
 ```shell
 go run main.go
 ```
-While the file is running, open a new window on your local brower and navigate to
+While the file is running, open a new window on your local brower and navigate to:
 
 ```shell
 http://localhost:8080/
