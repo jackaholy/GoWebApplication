@@ -6,16 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random Quote</title>
 </head>
+
 <body>
 <h1>Famous Quote</h1>
 <blockquote>
     <p>{{ .Content }}</p>
     <footer> - {{ .Author }}</footer>
 </blockquote>
-<form action="/save" method="post">
+<form action="/" method="post">
     <input type="hidden" name="content" value="{{ .Content }}">
     <input type="hidden" name="author" value="{{ .Author }}">
-    <button type="Reload">Generate Another Quote</button>
+    <!--Rather than "posting" anything, this just refreshes the page and thus generates a new quote-->
+    <button type="Generate">Generate Another Quote</button>
 </form>
 </body>
 </html>
