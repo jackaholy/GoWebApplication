@@ -1,7 +1,10 @@
 # GoWebApplication
 This Go program generates a random quote from a famous individual. The quotes are taken from
-the Quotable API which can be found at https://docs.quotable.io/. The user can click a button to generate a new
-quote as many times as they want.
+the Quotable API which can be found at:
+
+https://docs.quotable.io/.
+
+The user can click a button to generate a newquote as many times as they want.
 
 Steps to take before running this program:
 
@@ -20,4 +23,9 @@ While in your parent directory run:
 
 ```shell
 go run main.go
+```
+While the file is running, open a new window on your local brower and navigate to
+
+```shell
+http://localhost:8080/
 ```
